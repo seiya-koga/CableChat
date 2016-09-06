@@ -4,6 +4,7 @@ jQuery(document).on 'turbolinks:load', ->
     messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
 
     messages_to_bottom()
+    App.room = App.cable.subscriptions.create "RoomChannel",
 
     App.global_chat = App.cable.subscriptions.create {
         channel: "ChatRoomsChannel"

@@ -1,11 +1,15 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+
 @import "bootstrap";
 @import 'global';
 
-
-
-
  body {
-  display: block;
     overflow-x: hidden;
  }
 
@@ -20,16 +24,16 @@
 }
 
 #wrapper.toggled {
-    padding-left: 220px;
+    padding-left: 250px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 220px;
+    left: 250px;
     width: 0;
     height: 100%;
-    margin-left: -220px;
+    margin-left: -250px;
     overflow-y: auto;
     background: #000;
     -webkit-transition: all 0.5s ease;
@@ -39,7 +43,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 220px;
+    width: 250px;
 }
 
 #page-content-wrapper {
@@ -50,7 +54,7 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -220px;
+    margin-right: -250px;
 }
 
 /* Sidebar Styles */
@@ -58,16 +62,16 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 220px;
+    width: 250px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .sidebar-nav li {
-	list-style: none;
-    text-indent: 40px;
+    text-indent: 20px;
     line-height: 40px;
+
 }
 
 .sidebar-nav li a {
@@ -89,12 +93,12 @@
 
 .sidebar-nav > .sidebar-brand {
     height: 65px;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 60px;
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #lime;
+    color: #999999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -103,22 +107,15 @@
 }
 
 .sidebar-nav > .sidebar-side {
-    font-size: 65px;
-    line-height: 60px;
+    font-size: 16px;
+            list-style: none;
+
 }
 
-.sidebar-nav > .sidebar-side a {
-    color: lime;
-}
-
-.sidebar-nav > .sidebar-side a:hover {
-    color: #fff;
-    background: none;
-}
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 220px;
+        padding-left: 250px;
     }
 
     #wrapper.toggled {
@@ -126,8 +123,7 @@
     }
 
     #sidebar-wrapper {
-        width: 220px;
-        background-color: lime;
+        width: 250px;
     }
 
     #wrapper.toggled #sidebar-wrapper {

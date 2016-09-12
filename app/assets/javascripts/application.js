@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require cable
 //= require turbolinks
+
+
+  $(document).ready(function() {
+            $('.navbar .container .btn.btn-navbar').sidr({
+                source: '.navbar .container .nav-collapse.collapse'
+            });
+        });

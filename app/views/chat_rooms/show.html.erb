@@ -1,4 +1,18 @@
-<h1><%= @chat_room.title %></h1>
+<nav class="navbar navbar-default navbar-origin" role="navigation">
+        <div class="container-fluid">
+
+          <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+          <div class="navbar-header">
+
+<!-- タイトルなどのテキスト -->
+            <p class="navbar-brand"><%= @chat_room.title %></p>
+
+          </div>
+          </div>
+          </nav>
+
+
+
 
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>

@@ -10,9 +10,11 @@
 @import 'global';
 #footer {
     position: fixed;
+margin-left: 20px;
+margin-right: auto;
     bottom: 0;
-    width: 100%;
-    height: 100px;
+
+    
 }
 
  body {
@@ -118,6 +120,13 @@
 
 }
 
+.lead{
+    margin-top: 10px;
+    margin-left: 15px;
+
+
+}
+
 
 @media(min-width:768px) {
     #wrapper {
@@ -152,6 +161,22 @@
 
 
 /*sidebar-bootstarap-btn-change*/
-.navbar .container .btn.btn-navbar {
-    float: left !important;
+.navbar{
+            border-bottom: solid 2px rgba(0, 0, 0, 0.125);
+ }
+
+.navbar-brand{
+    font-size: 25px;
+}
+
+
+.form-group {
+   margin-bottom: 0rem; 
+}
+
+ 
+.form-footer {
+    
+    margin: 0px 10px 20px 20px;
+
 }

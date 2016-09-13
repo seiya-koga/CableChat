@@ -6,9 +6,16 @@ h1 {
 }
 
 #messages {
-  max-height: 450px;
+  max-height: 770px;
   overflow-y: auto;
   .avatar {
     margin: 0.5rem;
-  }
+  } 
+}
+
+
+#chat-index{
+max-height: 800px;
+  overflow-y: auto;
+	
 }

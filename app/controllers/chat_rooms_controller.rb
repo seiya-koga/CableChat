@@ -23,6 +23,10 @@ class ChatRoomsController < ApplicationController
   @message = Message.new
 end
 
+  def omniauth_authorize_path(resource_name, provider)
+    send "#{resource_name}_omniauth_authorize_path", provider
+  end
+
   private
 
   def chat_room_params

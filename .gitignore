@@ -23,4 +23,4 @@
 .idea/
 .env
 vendor/bundle
-/app/google_cloud_vision.rb
+/google_cloud_vision.rb

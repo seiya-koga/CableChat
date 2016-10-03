@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require cable
 //= require turbolinks
+//= require jquery.jpostal 
 
 
 $(document).ready(function() {

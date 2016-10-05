@@ -7,8 +7,7 @@
     # 2.times { @user.addresses.build }
   end
 
-  ...
-
+  
   private
 
     def user_params

@@ -6,10 +6,11 @@ class User < ApplicationRecord
  
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
-
-  def name
-  email.split('@')[0]
-end
+  has_many :addresses
+  # accepts_nested_attributes_for :addresses
+#   def name
+#   email.split('@')[0]
+# end
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first

@@ -20,8 +20,13 @@ module CableChat
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-I18n.enforce_available_locales = false
-config.i18n.default_locale = :ja
+# I18n.enforce_available_locales = false
+
+config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
+    config.i18n.available_locales = [:ja, :en]
+    config.time_zone = 'Tokyo'
+
 
   end
 end

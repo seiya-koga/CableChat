@@ -29,27 +29,10 @@ margin-right: auto;
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 100px;
 }
 
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
 
 #page-content-wrapper {
     width: 100%;
@@ -59,63 +42,10 @@ margin-right: auto;
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -100px;
 }
 
-/* Sidebar Styles */
 
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-
-}
-
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 40px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-.sidebar-nav > .sidebar-side {
-    font-size: 16px;
-            list-style: none;
-
-}
 
 .lead{
     margin-top: 10px;
@@ -127,7 +57,7 @@ margin-right: auto;
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 100px;
     }
 
     #wrapper.toggled {
@@ -153,35 +83,35 @@ margin-right: auto;
     }
 }
 
+/*facebook*/
 
-
-
-
-/*sidebar-bootstarap-btn-change*/
-.navbar{
-            border-bottom: solid 2px rgba(0, 0, 0, 0.125);
- }
-
-.navbar-brand{
-    font-size: 25px;
+.FbBtn {
+    background-color: #3b5998;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 4px;
 }
-.navbar-login-right{
-    float: right;
-}
-
-
-.form-group {
-   margin-bottom: 0rem; 
-}
-
  
-.form-footer {
-    
-    margin: 0px 10px 20px 20px;
-
+.FbBtn:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: url(app/assets/images/FB-f-Logo__blue_114.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+ 
+.FbBtnLabel {
+    color: #ffffff;
+    position: relative;
+    top: 13px;
+    text-align: center;
+    margin: 0 20px 0 20px;
 }
 
 
-.navbar .container .btn.btn-navbar {
-    float: left !important;
-}

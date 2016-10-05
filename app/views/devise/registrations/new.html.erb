@@ -1,36 +1,137 @@
-<h1>Sign up</h1>
+<h1>新規登録</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
+<div class="row">
+
 <div class="form-group">
-	<%= f.label :name %>
-	<%= f.text_field :name, autofocus: true, class: 'form-control' %>
+
+	    <div class="col-sm-2"><%= f.label :name %></div>
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+		<%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: :name, size:"20" %>
+	</div>
+</div>
+<div class="form-group">
+	    <div class="col-sm-2"><%= f.label :nickname %></div>
+
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+		<%= f.text_field :nickname, class: 'form-control', placeholder: :nickname, size: "20" %>
+				<small class="text-muted">(公開)</small>
+
+	</div>
 </div>
 
 <div class="form-group">
-	<%= f.label :email %>
-	<%= f.email_field :email, autofocus: true, class: 'form-control' %>
-</div>
+	<div class="col-sm-2"><%= f.label :email %></div>
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
 
+		<%= f.email_field :email, class: 'form-control', placeholder: :email, size: "20" %>
+	</div>
+</div>
 <div class="form-group">
-	<%= f.label :password %>
+	<div class="col-sm-2"><%= f.label :password %></div>
 	<% if @minimum_password_length %>
-	<small class="text-muted">(<%= @minimum_password_length %> characters minimum)</small>
 	<% end %>
-	<%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+		<%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: :password, size: "20" %>
+			<small class="text-muted">(<%= @minimum_password_length %> 桁以上)</small>
+
+	</div>
 </div>
 
 <div class="form-group">
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+	<div class="col-sm-2"><%= f.label :password_confirmation %></div>
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+		<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: :password_confirmation, size: "20" %>
+	</div>
 </div>
 
+<div class="form-group">
+	<div class="col-sm-2"><%= f.label :birthday %></div>
+	    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+		<%= raw sprintf(
+			f.date_select(
+				:birthday,
+				use_month_numbers: true,
+				start_year:        1930,
+				end_year:          (Time.now.year),
+				default:           Date.new(1989, 1, 1),
+				date_separator:    '%s'),
+				'年 ', '月 ') + '日' %>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-2"><%= f.label :gender %></div>
+
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.radio_button :gender, 0 %>男
+				<%= f.radio_button :gender, 1 %>女
+									<small class="text-muted">(公開)</small>
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-2"><%= f.label :zipcode, "郵便番号" %></div>
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.text_field :zipcode, class: 'form-control', placeholder: :zipcode, size: "20" %>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2"><%= f.label :prefecture_name, '都道府県' %></div>
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.collection_select :prefecture_name, JpPrefecture::Prefecture.all, :name, :name, include_blank: true %>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2"><%= f.label :city, "市町村" %></div>
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.text_field :city , class: 'form-control', placeholder: :city, size: "20"%>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2"><%= f.label :street, "番地" %></div>
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.text_field :street , class: 'form-control', placeholder: :street, size: "20"%>
+			</div>
+		</div>
+		<div class="form-group">
+
+			<div class="col-sm-2"><%= f.label :building, "建物" %></div>
+			    <div class="col-sm-10 form-inline" style="padding: 3px;">
+
+				<%= f.text_field :building , class: 'form-control', placeholder: :building, size: "20"%>
+			</div>
+		</div>
+
+		
 
 
 
-<%= f.submit "Sign up", class: 'btn btn-primary' %>
-<% end %>
+		<div class="form-group">
+		<div class="col-sm-6" style="padding-top: 30px;"><%= f.submit "Sign up", class: 'btn btn-primary' %></div>
+			<%= render "devise/shared/links" %></div>
+			<% end %>
+			</div>
 
 
 
-<%= render "devise/shared/links" %>
+<!--  <div class="field">
+ <%= f.label :addresses, "住所" %> -->
+
+ 
+ <div class="col-sm-2"><%= f.label :password %></div>
+  <div class="col-sm-10 form-inline" style="padding: 3px;">
+  <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: :password, size: "20" %><small class="text-muted">(変更しない場合は空白にしてください)</small>
+  </div>

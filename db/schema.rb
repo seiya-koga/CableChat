@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002075931) do
+ActiveRecord::Schema.define(version: 20161003051019) do
 
   create_table "areas", force: :cascade do |t|
     t.string  "postal_code",                 null: false
@@ -74,6 +74,11 @@ ActiveRecord::Schema.define(version: 20161002075931) do
     t.string   "nickname"
     t.date     "birthday"
     t.integer  "gender",                 default: 0,  null: false
+    t.integer  "zipcode"
+    t.string   "prefecture_name"
+    t.string   "city"
+    t.string   "street"
+    t.string   "building"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

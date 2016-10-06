@@ -88,6 +88,7 @@ Rails.application.configure do
 
   config.action_cable.allowed_request_origins = ['https://cablechat.herokuapp.com/',
                                                  'https://cablechat.herokuapp.com/']
+config.web_socket_server_url = "wss://cablechat.herokuapp.com/cable" 
 
   config.action_cable.url = "wss://cablechat.herokuapp.com/cable"
 end

@@ -30,6 +30,7 @@ margin-right: auto;
 
 #wrapper.toggled {
     padding-left: 100px;
+    padding-right: 100px;
 }
 
 
@@ -58,6 +59,7 @@ margin-right: auto;
 @media(min-width:768px) {
     #wrapper {
         padding-left: 100px;
+        padding-right: 100px;
     }
 
     #wrapper.toggled {

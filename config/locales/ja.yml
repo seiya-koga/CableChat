@@ -12,6 +12,10 @@ ja:
            email: メールアドレス
            birthday: 生年月日
            gender: 性別
+           zipcode: 郵便番号
+           prefecture_name: 都道府県
+           city: 市町村
+           street: 番地
            
 
   # activerecord:
@@ -114,4 +118,4 @@ ja:
       too_short: "は%{count}文字以上に設定して下さい。"
       too_long: "は%{count}文字以下に設定して下さい。"
       invalid: "は有効でありません。"
-      confirmation: "が内容とあっていません。"
+      confirmation: "パスワードが違います"

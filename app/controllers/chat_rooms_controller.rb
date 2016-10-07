@@ -19,9 +19,14 @@ class ChatRoomsController < ApplicationController
 
   def show
     @chat_rooms = ChatRoom.all
-  @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
-  @message = Message.new
-end
+    if @chat_rooms.present?
+      
+      @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+      @message = Message.new
+    else
+      redirect_to action: "new"
+    end
+  end
 
   def omniauth_authorize_path(resource_name, provider)
     send "#{resource_name}_omniauth_authorize_path", provider

@@ -182,6 +182,30 @@ margin-right: auto;
 }
 
 
+
+.card-text:last-child {
+    margin-bottom: 1rem;
+}
+
+
+
 .navbar .container .btn.btn-navbar {
     float: left !important;
 }
+
+
+@media (min-width: 768px) {
+  /* line 47, /Users/seiya/workspace/CableChat/vendor/bundle/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-1 {
+    width: 7%;
+  }
+.col-md-11 {
+    width: 93%;
+}
+  }
+
+
+
+  .nickname-strong{
+        font-size: 1.3rem;
+  }

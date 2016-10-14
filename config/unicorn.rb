@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-APP_PATH = "~/workspace/CableChat"
+APP_PATH = "/root/workspace/CableChat"
 worker_processes 1
 working_directory APP_PATH
 listen "/tmp/unicorn.sock"

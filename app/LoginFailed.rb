@@ -1,4 +1,4 @@
-class LoginFailed < StandardError	
+cclass LoginFailed < StandardError
 end
 
 

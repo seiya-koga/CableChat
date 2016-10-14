@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+APP_PATH = "~/workspace/CableChat"
 worker_processes 1
 timeout 15
 preload_app true  # 更新時ダウンタイム無し

@@ -11,7 +11,7 @@ margin-left: 20px;
 margin-right: auto;
     bottom: 0;
 
-    
+
 }
 
  body {
@@ -26,6 +26,7 @@ margin-right: auto;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    margin: 20px 40px
 }
 
 #wrapper.toggled {
@@ -95,7 +96,7 @@ margin-right: auto;
     text-decoration: none;
     border-radius: 4px;
 }
- 
+
 .FbBtn:after {
     content: "";
     position: absolute;
@@ -107,7 +108,7 @@ margin-right: auto;
     background-repeat: no-repeat;
     background-size: 20px 20px;
 }
- 
+
 .FbBtnLabel {
     color: #ffffff;
     position: relative;
@@ -117,3 +118,8 @@ margin-right: auto;
 }
 
 
+.btn-primary {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #0275d8;
+}

@@ -5,19 +5,39 @@
 
 @import "bootstrap";
 @import 'global';
-#footer {
+
+/*#footer {
     position: fixed;
 margin-left: 20px;
 margin-right: auto;
     bottom: 0;
-
-    
-}
+}*/
 
  body {
     overflow-x: hidden;
  }
 
+
+    .navbar-brand{
+margin-left: 2em;
+    }
+
+.col-md-10{
+        height: 100%;
+}
+
+
+
+
+
+ .form-control{
+        float: left;
+    width: 80%;
+    height: 100%;
+    margin-left: 10px;
+        background: #eee;
+
+}
 /* Toggle Styles */
 
 #wrapper {
@@ -38,9 +58,9 @@ margin-right: auto;
     left: 250px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    /*margin-left: -250px;*/
     overflow-y: auto;
-    background: #000;
+    /*background: #000;*/
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -64,14 +84,6 @@ margin-right: auto;
 
 /* Sidebar Styles */
 
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
 .sidebar-nav li {
     text-indent: 20px;
@@ -102,7 +114,7 @@ margin-right: auto;
     line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav > .drawer-brand a {
     color: #999999;
 }
 
@@ -125,6 +137,95 @@ margin-right: auto;
 }
 
 
+
+  .new_message{
+        position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 4rem;
+    margin-bottom: 10px
+    }
+
+      #messages {
+            max-height: 900px;
+    overflow-y: auto;
+            margin-top: 4.1rem;
+    margin-bottom: 4.1rem;
+        }
+
+
+
+
+/*sidebar-bootstarap-btn-change*/
+.navbar{
+
+        position: fixed;
+    width: 100%;
+    height: 4.2rem;
+    top: 0;
+    z-index: 9;
+        background-color: #FFFFFF;
+
+
+            border-bottom: solid 2px rgba(0, 0, 0, 0.125);
+ }
+
+.navbar-brand{
+    font-size: 1.5625rem;
+}
+.navbar-login-right{
+    float: right;
+        right: 1rem;
+    position: fixed;
+}
+
+
+
+
+/*
+.form-footer {
+ position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin: 0px 10px 20px 20px;
+
+}*/
+
+
+
+.card-text:last-child {
+    margin-bottom: 1rem;
+}
+
+
+
+.navbar .container .btn.btn-navbar {
+    float: left !important;
+}
+
+
+/*@media (min-width: 768px) {*/
+  /* line 47, /Users/seiya/workspace/CableChat/vendor/bundle/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-1 {
+    float: left;
+  }
+
+
+
+  .nickname-strong{
+        font-size: 1.3rem;
+  }
+
+  .avatar {
+    margin: 0.5rem;
+  }
+     .btn{
+
+    height: 100%;
+    }
+
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
@@ -135,7 +236,7 @@ margin-right: auto;
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        /*width: 250px;*/
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -151,61 +252,75 @@ margin-right: auto;
         position: relative;
         margin-right: 0;
     }
+
+
 }
 
 
 
 
 
-/*sidebar-bootstarap-btn-change*/
-.navbar{
-            border-bottom: solid 2px rgba(0, 0, 0, 0.125);
- }
-
-.navbar-brand{
-    font-size: 25px;
-}
-.navbar-login-right{
-    float: right;
+  @media(max-width:64em){
+    .col-md-10{
+padding-right: 0;
+    padding-left: 0;
+    width: 100%
 }
 
+    .form-control{
+        float: left;
+    width: 80%;
+    height: 100%;
+    margin-left: 0;
+        }
+    .navbar-brand{
+margin-left: 2em;
+    }
+    #messages {
+    margin-bottom: 3.6rem;
 
-.form-group {
-   margin-bottom: 0rem; 
-}
-
- 
-.form-footer {
-    
-    margin: 0px 10px 20px 20px;
-
-}
+    }
+      .btn{
+        line-height: inherit;
+    width: 20%;
+    }
+  .new_message{
+                height: 7%;
+                margin-bottom: 0;
 
 
 
-.card-text:last-child {
+    }
+    }
+
+
+
+  /* 画面幅が480px以下の場合 */
+@media screen and (max-width:480px) {
+ .navbar{
+        position: fixed;
+    width: 100%;
+    height: 4.2rem;
+    top: 0;
+    z-index: 9;
+        background-color: #FFFFFF;
+
+    }
+
+    #messages {
+          max-height: 50.4375rem;
     margin-bottom: 1rem;
+    }
 }
 
 
 
-.navbar .container .btn.btn-navbar {
-    float: left !important;
+
+.shared_link{
+    margin-left: 20px;
 }
 
-
-@media (min-width: 768px) {
-  /* line 47, /Users/seiya/workspace/CableChat/vendor/bundle/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1 {
-    width: 7%;
-  }
-.col-md-11 {
-    width: 93%;
+.btn_size{
+    width: 60%
 }
-  }
 
-
-
-  .nickname-strong{
-        font-size: 1.3rem;
-  }

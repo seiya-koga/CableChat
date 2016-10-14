@@ -9,7 +9,7 @@ default: &default
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_general_ci
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
 
 
 development:
@@ -25,7 +25,11 @@ test:
   password: Sk100106_test
 
 production:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
   database: db_production
   username: seiya_production
   password: Sk100106_production
+  socket: /var/lib/mysql/mysql.sock

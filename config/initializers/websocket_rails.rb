@@ -15,11 +15,11 @@
 #   # Change to true to enable standalone server mode
 #   # Start the standalone server with rake websocket_rails:start_server
 #   # * Requires Redis
-#   config.standalone = true
-#   config.standalone_port = 3001
-#   config.redis_options = {driver: :ruby}
-#   config.synchronize = false
-#   config.redis_options = {:host => '0.0.0.0', :port => '6379'}
+  config.standalone = true
+  config.standalone_port = 3001
+  config.redis_options = {driver: :ruby}
+  config.synchronize = false
+  config.redis_options = {:host => '127.0.0.1', :port => '6379'}
 #   # Change to true to enable channel synchronization between
 #   # multiple server instances.
 #   # * Requires Redis.

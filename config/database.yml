@@ -9,20 +9,20 @@ default: &default
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_general_ci
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 
-# development:
-#   <<: *default
-#   database: db_development
-#   username: seiya_development
-#   password: Sk100106_development
+development:
+  <<: *default
+  database: db_development
+  username: seiya_development
+  password: Sk100106_development
 
-# test:
-#   <<: *default
-#   database: db_test
-#   username: seiya_test
-#   password: Sk100106_test
+test:
+  <<: *default
+  database: db_test
+  username: seiya_test
+  password: Sk100106_test
 
 production:
   <<: *default

@@ -1,4 +1,4 @@
-# WebsocketRails.setup do |config|
+ WebsocketRails.setup do |config|
 
 #   # Uncomment to override the default log level. The log level can be
 #   # any of the standard Logger log levels. By default it will mirror the
@@ -62,5 +62,4 @@
 #   # requires CORS to be enabled for GET "/websocket" request.
 #   # List here the origin domains allowed to perform the request.
 #   # config.allowed_origins = ['http://localhost:3000']
-
-# end
+end

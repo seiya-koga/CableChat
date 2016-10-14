@@ -1,5 +1,4 @@
 WebsocketRails.setup do |config|
-<<<<<<< HEAD
 
   # Uncomment to override the default log level. The log level can be
   # any of the standard Logger log levels. By default it will mirror the
@@ -20,7 +19,7 @@ WebsocketRails.setup do |config|
   config.standalone_port = 3001
   config.redis_options = {driver: :ruby}
   config.synchronize = false
-  config.redis_options = {:host => '127.0.0.1', :port => '6379'}
+  config.redis_options = {:host => '0.0.0.0/', :port => '6379'}
   # Change to true to enable channel synchronization between
   # multiple server instances.
   # * Requires Redis.
@@ -64,11 +63,4 @@ WebsocketRails.setup do |config|
   # List here the origin domains allowed to perform the request.
   # config.allowed_origins = ['http://localhost:3000']
 
-=======
-  config.standalone      = true
-  config.standalone_port = 3001
-  config.redis_options   = {driver: :ruby}
-  config.synchronize     = false
-  config.redis_options   = {:host => '0.0.0.0', :port => '6379'}
->>>>>>> a1db7a508a0fd065e342d6ad870f9c91c3fd193a
 end

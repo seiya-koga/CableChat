@@ -13,7 +13,7 @@ class User < ApplicationRecord
 # end
 
 validates :name, presence: true, length: { maximum: 15 }
-validates :nickname, presence: true, length: { maximum: 15 }
+validates :nickname, presence: true, length: { maximum: 10 }
 
 validates :zipcode, presence: true
 validates :prefecture_name, presence: true
@@ -33,6 +33,6 @@ validates :street, presence: true
   #   user
   # end
 
- 
+
 
 end

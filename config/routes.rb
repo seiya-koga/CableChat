@@ -7,7 +7,7 @@ devise_for :users, :controllers => {
 }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :chat_rooms, only: [:new, :create, :show]
-root :to => 'chat_rooms#show', :id => '1'
+root :to => 'chat_rooms#show', :id => '2'
 mount ActionCable.server => '/cable'
  resources :photos do
     post :upload, on: :collection

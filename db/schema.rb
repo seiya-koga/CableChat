@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20161006054855) do
 
   create_table "chat_rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.string   "title"
+    t.string   "title",      null: false
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,14 +56,14 @@ ActiveRecord::Schema.define(version: 20161006054855) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name",                                null: false
+    t.string   "name"
     t.string   "nickname",                            null: false
-    t.date     "birthday",                            null: false
-    t.integer  "gender",                 default: 0,  null: false
-    t.integer  "zipcode",                             null: false
-    t.string   "prefecture_name",                     null: false
-    t.string   "city",                                null: false
-    t.string   "street",                              null: false
+    t.date     "birthday"
+    t.integer  "gender",                 default: 0
+    t.integer  "zipcode"
+    t.string   "prefecture_name"
+    t.string   "city"
+    t.string   "street"
     t.string   "building"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree

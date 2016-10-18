@@ -12,13 +12,13 @@ class User < ApplicationRecord
 #   email.split('@')[0]
 # end
 
-validates :name, presence: true, length: { maximum: 15 }
+# validates :name, presence: true, length: { maximum: 15 }
 validates :nickname, presence: true, length: { maximum: 10 }
 
-validates :zipcode, presence: true
-validates :prefecture_name, presence: true
-validates :city, presence: true
-validates :street, presence: true
+# validates :zipcode, presence: true
+# validates :prefecture_name, presence: true
+# validates :city, presence: true
+# validates :street, presence: true
 
   # def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
   #   user = User.where(:provider => auth.provider, :uid => auth.uid).first

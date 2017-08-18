@@ -1,130 +1,17 @@
-
-
-
-
-
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 @import "bootstrap";
 @import 'global';
-#footer {
-    position: fixed;
-margin-left: 20px;
-margin-right: auto;
-    bottom: 0;
-
-
-}
-
- body {
-    overflow-x: hidden;
- }
-
-/* Toggle Styles */
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    margin: 20px 40px
-}
-
-#wrapper.toggled {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-
-
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -100px;
-}
-
-
-
-.lead{
-    margin-top: 10px;
-    margin-left: 15px;
-
-
-}
-
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-}
-
-/*facebook*/
-
-.FbBtn {
-    background-color: #3b5998;
-    height: 45px;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.FbBtn:after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 20px;
-    height: 20px;
-    background-image: url(app/assets/images/FB-f-Logo__blue_114.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-}
-
-.FbBtnLabel {
-    color: #ffffff;
-    position: relative;
-    top: 13px;
-    text-align: center;
-    margin: 0 20px 0 20px;
-}
-
-
-.btn-primary {
-  color: #fff;
-  background-color: #ccc;
-  border-color: #0275d8;
-}
-
-.col-sm-10{
-    margin-bottom: 30px;
-}
-

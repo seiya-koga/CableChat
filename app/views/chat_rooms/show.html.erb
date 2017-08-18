@@ -1,43 +1,16 @@
+<h1><%= @chat_room.title %></h1>
 
-
-
-	<nav class="drawer-nav">
-
-			<!-- ドロワーメニューの中身 -->
-
-			<%= render "sidebar" %>
-
-	</nav>
-
-
-
-
-
-	<section class="drawer-contents">
-
-	<%= render "navbar" %>
-		<!-- コンテンツ部分 -->
-
-		<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-			<%= render @chat_room.messages %>
-		</div>
-
-
-
-			<%= form_for @message, url: '#' do |f| %>
-<div class="col-md-10">
-
-				<%= f.text_area :body, class: 'form-control' %>
-				<%= f.submit "Post", class: 'btn btn-primary ' %>
+<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+  <%= render @chat_room.messages %>
 </div>
 
+<%= form_for @message, url: '#' do |f| %>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control' %>
+    <small class="text-muted">From 2 to 1000 characters</small>
+  </div>
 
-
-
-
-			<% end %>
-
-
-	</section>
-
+  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+<% end %>
 

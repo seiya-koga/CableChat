@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'rails', '~> 5.0.0'
+
+gem 'rails-controller-testing'
+
+gemspec :path => '../'
+
+platforms :ruby do
+  gem 'sqlite3'
+end
+
+platforms :jruby do
+  gem 'activerecord-jdbcsqlite3-adapter'
+end

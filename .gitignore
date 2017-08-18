@@ -16,14 +16,6 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-/tmp
-public/uploads/tmp
-.env
 
 # Ignore Byebug command history file.
 .byebug_history
-
-.idea/
-.env
-vendor/bundle
-/google_cloud_vision.rb

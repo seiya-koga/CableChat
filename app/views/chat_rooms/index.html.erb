@@ -1,33 +1,7 @@
+<h1>Chat rooms</h1>
 
+<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
 
-
-<!-- Sidebar -->
-<div id="sidebar-wrapper">
-	<ul class="sidebar-nav">
-		<li class="sidebar-brand">
-			<a href="#">
-				Near By
-			</a>
-		</li>
-		
-			<%= render @chat_rooms %>
-		
-	</ul>
-</div>
-<!-- /#sidebar-wrapper -->
-
-
-<!-- Page Content -->
-
-<!-- /#page-content-wrapper -->
-<div id="page-content-wrapper">
-	<div class="row">
-		<div class="container-fluid">
-
-			<h1>Chat rooms</h1>
-
-			<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
-
-		</div>
-	</div>
-</div>
+<ul>
+  <%= render @chat_rooms %>
+</ul>

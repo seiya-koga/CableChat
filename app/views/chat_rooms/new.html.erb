@@ -1,15 +1,10 @@
-  <div class="new_chatroom">
-
-<h1> chat room</h1>
+<h1>Add chat room</h1>
 
 <%= form_for @chat_room do |f| %>
-  <!-- <div class="form-group"> -->
-    <%= f.text_field :title, autofocus: true, class: 'form-control', placeholder: :title, size:"20"%>
-  <!-- </div> -->
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+  </div>
 
-  <%= f.submit "作成", class: 'btn btn-primary btn-width' %>
+  <%= f.submit "Add!", class: 'btn btn-primary' %>
 <% end %>
-
-</div>
-
-

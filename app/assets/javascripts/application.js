@@ -10,29 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery2
+//= require jquery
 //= require jquery_ujs
-//= require cable
 //= require turbolinks
-//= require jquery.jpostal 
-
-
-// $(document).ready(function() {
-// 	$('.navbar .container .btn.btn-navbar').sidr({
-// 		source: '.navbar .container .nav-collapse.collapse'
-// 	});
-// });
-
-// $(document).ready(function() {
-// 	$('.navbar .container .btn.btn-navbar')
-// 	.attr('data-toggle', '')
-// 	.attr('data-target', '')
-// 	.sidr({
-// 		source: '.navbar .container .nav-collapse.collapse'
-// 	});
-// });
-
-
-$(document).ready(function() {
-  $(".drawer").drawer();
-});
+//= require_tree .
+//= require cable
